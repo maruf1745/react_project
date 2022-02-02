@@ -6,9 +6,8 @@ import NavbarComp from "./components/NavbarComp";
 function App() {
   return (
    <>
-    <div className='App'>
+    <div>
       <NavbarComp />
-      <h1 className="btn btn-success">Hello</h1>
     </div>
    </>
   );

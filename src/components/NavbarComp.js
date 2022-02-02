@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import { BrowserRouter as Router, Routes, Route, Link, Outlet } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "../Pages/Home";
 import Service from "../Pages/Service";
 import About from "../Pages/About";
-class NavbarComp extends Component {
-    render() {
-        return (
+
+const NavbarComp = () => {
+    return (
             <Router>
-            <div>
+            <div className='container'>
                 <Navbar bg="light" expand="lg">
                     
                         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
@@ -37,11 +37,11 @@ class NavbarComp extends Component {
                     <Route path="/service" element={<Service />} />
                 </Routes>
             </div>
-            <Outlet />
+            
             </Router>
             
         );
-    }
+    
 }
 
 export default NavbarComp;
